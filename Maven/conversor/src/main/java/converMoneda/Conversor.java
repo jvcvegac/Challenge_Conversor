@@ -9,31 +9,72 @@ import javax.swing.JOptionPane;
 
 public class Conversor {
 
-    //public static void main(String[] args) {
-    public void seleccionaMoneda() {;
+        public void seleccionaMoneda() {;
         String[] countries = {"ARS", "AUD", "BOV", "BRL", "CNY", "COP", "USD", "EUR", "GBP", "JPY", "CAD", "CLP", "MXV", "PEN", "VEF", "UYI"}; // Agrega aquí más monedas según sea necesario
-        String monedaOriginal, monedaDestino;
+
+        boolean seleccionado = false;
+        String monedaOriginal = "";
+        String monedaDestino = "";
 
         JOptionPane.showMessageDialog(null, "Bienvenido al conversor de monedas");
 
-        monedaOriginal = (String) JOptionPane.showInputDialog(
-                null,
-                "Selecciona la moneda de origen:",
-                "Moneda de Origen",
-                JOptionPane.PLAIN_MESSAGE,
-                null,
-                countries,
-                countries[0]);
+        while (!seleccionado) {
+            monedaOriginal = (String) JOptionPane.showInputDialog(
+                    null,
+                    "Selecciona la moneda de origen:",
+                    "Moneda de Origen",
+                    JOptionPane.PLAIN_MESSAGE,
+                    null,
+                    countries,
+                    countries[0]);
 
-        monedaDestino = (String) JOptionPane.showInputDialog(
-                null,
-                "Selecciona la moneda de destino:",
-                "Moneda de Destino",
-                JOptionPane.PLAIN_MESSAGE,
-                null,
-                countries,
-                countries[0]);
+            if (monedaOriginal == null) {
+                int opcionSalir = JOptionPane.showConfirmDialog(
+                        null,
+                        "¿Desea salir del programa?",
+                        "Salir",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE);
 
+                if (opcionSalir == JOptionPane.YES_OPTION) {
+                    JOptionPane.showMessageDialog(null, "Saliendo del programa. ¡Hasta luego!", "Salir",
+                            JOptionPane.INFORMATION_MESSAGE);
+                    System.exit(0);
+                }
+            } else {
+                seleccionado = true;
+            }
+        }
+
+        seleccionado = false;
+        while (!seleccionado) {
+            monedaDestino = (String) JOptionPane.showInputDialog(
+                    null,
+                    "Selecciona la moneda de destino:",
+                    "Moneda de Destino",
+                    JOptionPane.PLAIN_MESSAGE,
+                    null,
+                    countries,
+                    countries[0]);
+
+            if (monedaDestino == null) {
+                int opcionSalir = JOptionPane.showConfirmDialog(
+                        null,
+                        "¿Desea salir del programa?",
+                        "Salir",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE);
+
+                if (opcionSalir == JOptionPane.YES_OPTION) {
+                    JOptionPane.showMessageDialog(null, "Saliendo del programa. ¡Hasta luego!", "Salir",
+                            JOptionPane.INFORMATION_MESSAGE);
+                    System.exit(0);
+                }
+            } else {
+                seleccionado = true;
+            }
+        }
+    
         String amountStr;
         double amountInput;
         do {
