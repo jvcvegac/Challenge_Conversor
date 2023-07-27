@@ -1,7 +1,7 @@
+converMoneda\CurrencyConverter.class
+converMoneda\Conversor.class
 iniciar\MenuConver.class
-nrgocios\CurrencyConverter.class
-nrgocios\ConversionResult.class
-nrgocios\ExchangeRateResponse.class
+converMoneda\ExchangeRateResponse.class
+converMoneda\ConversionResult.class
+converMoneda\ConversionRateException.class
 iniciar\Menu.class
-nrgocios\ConversionRateException.class
-nrgocios\Conversor.class

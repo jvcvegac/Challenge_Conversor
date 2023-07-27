@@ -1,5 +1,5 @@
 
-package nrgocios;
+package converMoneda;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.swing.JOptionPane;

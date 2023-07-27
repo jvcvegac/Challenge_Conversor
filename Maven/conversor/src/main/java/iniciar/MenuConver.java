@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package iniciar;
 
 import javax.swing.JOptionPane;
-import nrgocios.Conversor;
+import converMoneda.Conversor;
 
 /**
  *
@@ -34,11 +31,11 @@ public class MenuConver {
                         cmoneda.seleccionaMoneda();
                         break;
                     case "Convertir Medidas":
-                        JOptionPane.showMessageDialog(null, "Seleccionaste Convertir Medidas", "Convertir Medidas",
+                        JOptionPane.showMessageDialog(null, "Seleccionaste Nueva Opción a Saber...", "Nueva Opción",
                                 JOptionPane.INFORMATION_MESSAGE);
                         break;
                     case "Convertir Temperaturas":
-                        JOptionPane.showMessageDialog(null, "Seleccionaste Convertir Temperaturas", "Convertir Temperaturas",
+                        JOptionPane.showMessageDialog(null, "Seleccionaste Otra Opción a Saber...", "Otra Opción",
                                 JOptionPane.INFORMATION_MESSAGE);
                         break;
                     default:

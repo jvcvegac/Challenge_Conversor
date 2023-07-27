@@ -1,6 +1,6 @@
 
 
-package nrgocios;
+package converMoneda;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
